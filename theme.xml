@@ -1150,7 +1150,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
         Puan: <span class='rating'>5</span> 
       </div>
 
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.pageType == &quot;static_page&quot; or data:blog.pageType == &quot;item&quot;'>
 <div class='post-item w3-card-2 w3-margin-bottom w3-padding w3-border uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <b:if cond='data:post.firstImageUrl'><meta expr:content='data:post.firstImageUrl' itemprop='image'/><b:else/><meta content='//1.bp.blogspot.com/-mN8wkyLH-lU/XrsUwNSSyUI/AAAAAAAAOcA/5pzfC-7bYdc3mxg8-qIUNBdqp1br6SgAACLcBGAsYHQ/s460/nothumb.webp' itemprop='image'/> </b:if>
     <meta expr:content='data:blog.blogId'/><meta expr:content='data:post.id'/><a expr:name='data:post.id'/><a expr:href='data:post.url' itemprop='mainEntityOfPage' style='display:none'><span itemprop='name'><data:post.title/></span></a>
