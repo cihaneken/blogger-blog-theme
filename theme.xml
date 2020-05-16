@@ -19,9 +19,9 @@
     </title>
     <!-- Description and Keywords (start) -->
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
-    <meta content='Your description' name='description'/>
+    <meta content='Çoğunlukla İnternet, Webmaster, Wordpress, SEO, Hosting gibi konularda yazılarının bulunduğu kişisel blog sitesi.' name='description'/>
     </b:if>
-    <meta content='Your keyword' name='keywords'/>
+    <meta content='kişisel blog,webmaster,wordpress,seo,hosting,server,web tasarım,' name='keywords'/>
     <!-- Description and Keywords (end) -->
     <b:if cond='data:blog.pageType == &quot;item&quot;'>
         <meta expr:content='data:blog.pageName' property='og:title'/>
@@ -54,7 +54,7 @@
       <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
     </b:if>
 <meta content='Turkey' name='geo.placename'/>
-<meta content='author name' name='Author'/>
+<meta content='Cihan Eken' name='Author'/>
 <meta content='general' name='rating'/>
 <meta content='tr' name='geo.country'/>
 <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
@@ -304,8 +304,8 @@ html, body, p, a, h1, h2, h3, h4, h5, h6 {
   a {text-decoration:none;color:#4090f1;}
   a.quickedit {display: none;}
 
-  #header-wrapper .widget {margin:0;}
-
+#header-wrapper .widget {margin:0;}
+#brand-ads-div img {width: 100%;}
 
 /* POST CSS */
 
@@ -381,6 +381,7 @@ h2.post-title a {color:#464646;}
 #sidebar .widget h2 {font-weight: 700;transition: all 0.5s ease-out;text-transform: uppercase;font-size: 14px;line-height: 28px;padding: 12px;text-align: center;margin: 0;color: #333;}
 #sidebar .widget ul {list-style-type: none;margin: 0;padding: 0;}
 #sidebar .widget a {font-size: 16px;}
+#sidebar .widget img {width:100%}
 
 #sidebar .PopularPosts .item-title {font-size:18px;}
 #sidebar .PopularPosts ul {list-style-type: none;margin: 0;padding: 0;}
@@ -404,6 +405,15 @@ h2.post-title a {color:#464646;}
     float: left;
     padding: 0 6px 17px 0;
 }
+
+/* CONTACT FORM WİDGET */
+.contact-form-widget {max-width: 420px;width:100%;}
+.contact-form-name, .contact-form-email, .contact-form-email-message {max-width: 420px;width: 100%;}
+.contact-form-email, .contact-form-name {background: #fff;background-color: #fff;border: 1px solid #d9d9d9;border-top: 1px solid #c0c0c0;box-sizing: border-box;color: #333;display: inline-block;font-size: 16px;height: 30px;margin: 0;margin-top: 5px;padding:0 0 0 3px;vertical-align: top;}
+.contact-form-email-message {background: #fff;background-color: #fff;border: 1px solid #d9d9d9;border-top: 1px solid #c0c0c0;box-sizing: border-box;color: #333;display: inline-block;font-size: 16px;margin: 0;margin-top: 5px;padding:0 0 0 3px;vertical-align: top;}
+.contact-form-button-submit {width: 100px;height: 35px;font-size: 16px;background-color: #4d90fe;background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);background-image: -o-linear-gradient(top,#4d90fe,#4787ed);background-image: linear-gradient(top,#4d90fe,#4787ed);border-color: #3079ed;filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed');
+}
+/* ----------------- */
 
 
 #footer-wrapper .widget {background:#fff;margin:16px 0 16px 16px;padding: 0 16px 16px 16px;border: 1px solid #ccc;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
@@ -434,7 +444,6 @@ h2.post-title a {color:#464646;}
   @media only screen and (max-width: 600px) {
     h2.post-title {font-size:20px}
     #post-div {padding:0 0 0 0;margin:0 2px;}
-    .post {padding:0 16px 0 16px}
 	.block-image {margin-right:0px;}
     .block-image a {height:200px}
 	#sidebar .widget {margin:16px 2px 16px 2px;}
@@ -527,7 +536,24 @@ h2.post-title a {color:#464646;}
 </b:section>
   </div>
 <div class='w3-col s12 m8 l9' id='brand-ads-div'>
-<b:section id='brand-ads' maxwidgets='1' showaddelement='yes'/>
+<b:section id='brand-ads' maxwidgets='1' showaddelement='yes'>
+  <b:widget id='HTML1' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<img alt="banner image" src="https://1.bp.blogspot.com/-9JXEVlBLxa8/Wc6Ac6Abw3I/AAAAAAAAKDc/Xj6VZGZ-o9o-1M87IdsV_5-CYq62Duh-gCLcBGAs/s1600/unnamed.jpg" title="banner-title" width="100%"/>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section>
   </div>
   </div><!-- brand-wrapper -->
 <div class='w3-rest w3-card-2' id='header-wrapper'>
@@ -634,12 +660,12 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   <b:widget id='LinkList110' locked='true' title='Menu' type='LinkList' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>NONE</b:widget-setting>
-      <b:widget-setting name='text-1'>Hakkımda</b:widget-setting>
-      <b:widget-setting name='link-1'>http://#/</b:widget-setting>
+      <b:widget-setting name='text-1'>İletişim</b:widget-setting>
+      <b:widget-setting name='link-1'>http://#</b:widget-setting>
       <b:widget-setting name='text-0'>Hakkımda</b:widget-setting>
-      <b:widget-setting name='link-2'>http://#/</b:widget-setting>
+      <b:widget-setting name='link-2'>http://#</b:widget-setting>
       <b:widget-setting name='link-0'>http://#</b:widget-setting>
-      <b:widget-setting name='text-2'>Ana Sayfa</b:widget-setting>
+      <b:widget-setting name='text-2'>Reklam</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
           <div class='widget-content'>
@@ -661,7 +687,24 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
 </div><!-- header-wrapper -->
 
 <div class='w3-rest' id='random-post-div'>
-<b:section class='HTML' id='HTML' maxwidgets='1' name='Random Post' showaddelement='yes'/>
+<b:section class='HTML' id='HTML' maxwidgets='1' name='Random Post' showaddelement='yes'>
+  <b:widget id='HTML4' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>rasgeleyazilaryukleniyor</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section>
 </div>
 
 
@@ -1150,7 +1193,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
         Puan: <span class='rating'>5</span> 
       </div>
 
-<b:if cond='data:blog.pageType == &quot;static_page&quot; or data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
 <div class='post-item w3-card-2 w3-margin-bottom w3-padding w3-border uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <b:if cond='data:post.firstImageUrl'><meta expr:content='data:post.firstImageUrl' itemprop='image'/><b:else/><meta content='//1.bp.blogspot.com/-mN8wkyLH-lU/XrsUwNSSyUI/AAAAAAAAOcA/5pzfC-7bYdc3mxg8-qIUNBdqp1br6SgAACLcBGAsYHQ/s460/nothumb.webp' itemprop='image'/> </b:if>
     <meta expr:content='data:blog.blogId'/><meta expr:content='data:post.id'/><a expr:name='data:post.id'/><a expr:href='data:post.url' itemprop='mainEntityOfPage' style='display:none'><span itemprop='name'><data:post.title/></span></a>
@@ -1711,6 +1754,22 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   </div>
 </b:includable>
       </b:widget>
+      <b:widget id='HTML3' locked='false' title='' type='HTML'>
+        <b:widget-settings>
+          <b:widget-setting name='content'><![CDATA[<img alt="banner image" src="https://4.bp.blogspot.com/-2Vqkc5tGUV0/Wc5-op_EtpI/AAAAAAAAKDY/TOAl5lg_VQAEQQHabZuZaL091BErrVlfACEwYBhgL/s1600/3-1.jpg" title="banner-title" width="100%"/>]]></b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+      </b:widget>
     </b:section>  
   </div>
 
@@ -1889,6 +1948,39 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='ContactForm1' locked='false' title='İletişim Formu' type='ContactForm'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='contact-form-widget'>
+    <div class='form'>
+      <form name='contact-form'>
+        <p/>
+        <data:contactFormNameMsg/>
+        <br/>
+        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormEmailMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormMessageMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='5'/>
+        <p/>
+        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
+        <p/>
+        <div style='text-align: center; max-width: 222px; width: 100%'>
+          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
+          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
+        </div>
+      </form>
+    </div>
+  </div>
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
 </b:section>
   </div>
   </div><!-- content-wrapper -->
@@ -1903,7 +1995,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
 <b:section id='footer4' showaddelement='yes'>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'>Blogger Blog Theme Copyright</b:widget-setting>
+      <b:widget-setting name='content'>2020 - BLOGCU.ML - Tüm hakları saklıdır.</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
