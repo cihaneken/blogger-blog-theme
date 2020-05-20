@@ -2341,7 +2341,7 @@ $('.HTML .widget-content').each(function() {
 	var no_image_url = "//2.bp.blogspot.com/-IO-XEI1LgEs/VmPNKFp0BhI/AAAAAAAACOg/_JrYHMBXV5w/s460/nothumb.jpg";
 	var randomposts_number = 4;
     var text = $(this).text();
-    if (text.match('rasgeleyazilaryukleniyor')) {
+    if (text.match('rastgeleyazilar')) {
         $.ajax({
             url: "/feeds/posts/default?alt=json-in-script",
             type: 'get',
@@ -2366,7 +2366,7 @@ $('.HTML .widget-content').each(function() {
                                 }
                             }
                             var posttitle = data.feed.entry[i].title.$t;
-                            var tag = data.feed.entry[i].category[0].term;
+                            //var tag = data.feed.entry[i].category[0].term;
                             var content = data.feed.entry[i].content.$t;
                             var $content = $('<div>').html(content);
                             if (content.indexOf("http://www.youtube.com/embed/") > -1 || content.indexOf("https://www.youtube.com/embed/") > -1) {
@@ -2382,7 +2382,7 @@ $('.HTML .widget-content').each(function() {
                         }
                         htmlcode += '</ul><div class="clear"/>';
                         $('.HTML .widget-content').each(function() {
-                            if ($(this).text().match('rasgeleyazilaryukleniyor')) {
+                            if ($(this).text().match('rastgeleyazilar')) {
                                 $(this).html(htmlcode);
                                 $(this).find('.mag-thumb').each(function() {
                                     $(this).attr('style', function(i, src) {
@@ -2405,7 +2405,6 @@ $('.HTML .widget-content').each(function() {
     }
 
 });
-
 
 
 /*
