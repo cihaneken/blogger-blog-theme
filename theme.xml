@@ -19,9 +19,9 @@
     </title>
     <!-- Description and Keywords (start) -->
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
-    <meta content='Çoğunlukla İnternet, Webmaster, Wordpress, SEO, Hosting gibi konularda yazılarının bulunduğu kişisel blog sitesi.' name='description'/>
+    <meta content='Blogger Blog Teması - Ücretsiz ve Açık Kaynak' name='description'/>
     </b:if>
-    <meta content='kişisel blog,webmaster,wordpress,seo,hosting,server,web tasarım,' name='keywords'/>
+    <meta content='blogger,blog theme,blog teması,blogger teması,blogger theme,free blogger theme,' name='keywords'/>
     <!-- Description and Keywords (end) -->
     <b:if cond='data:blog.pageType == &quot;item&quot;'>
         <meta expr:content='data:blog.pageName' property='og:title'/>
@@ -57,7 +57,7 @@
 <meta content='Cihan Eken' name='Author'/>
 <meta content='general' name='rating'/>
 <meta content='tr' name='geo.country'/>
-<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 <b:skin><![CDATA[
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
@@ -334,6 +334,143 @@ h2.post-title a {color:#464646;}
 .post-body img {max-width:90%;height:auto;margin:0;padding:0;}
 .post-item {background-color:#fff;}
 .post-item .post-body {background-color:#fff;font-size: 16px;line-height:1.5;color:#020202;letter-spacing: .9px;}
+
+/* RELATED POSTS */
+#related-posts {
+    margin-bottom: 10px;
+}
+.related li {
+    width: 30.835%;
+    display: inline-block;
+    height: auto;
+    min-height: 184px;
+    float: left;
+    margin-right: 24px;
+    overflow: hidden;
+    position: relative;
+}
+.related-thumb {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+.related li .related-img {
+    width: 100%;
+    height: 160px;
+    display: block;
+    transition: all .3s ease-out!important;
+    -webkit-transition: all .3s ease-out!important;
+    -moz-transition: all .3s ease-out!important;
+    -o-transition: all .3s ease-out!important;
+}
+.related-title a {
+    font-size: 15px;
+    line-height: 1.33em;
+    padding: 5px 5px 5px 0;
+    font-weight: 400;
+    color: #010101;
+    display: block;
+}
+.related li:nth-of-type(3), .related li:nth-of-type(6), .related li:nth-of-type(9) {
+    margin-right: 0;
+}
+h2.sf-title {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.sf-module-title .sf-title {
+    display: inline-block;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin: 0;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: inherit;
+    white-space: nowrap;
+}
+.sf-module-title {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    margin: 1rem 0 25px;
+    width: 100%;
+    font-size: 1rem;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.sf-module-title.sf-has-line:before, .sf-module-title.sf-has-line:after {
+    background-color: #d7d7d7;
+}
+.sf-module-title:before, .sf-module-title:after {
+    display: inline-block;
+    content: &quot; &quot;;
+    -webkit-flex: 1 0;
+    -ms-flex: 1 0;
+    flex: 1 0;
+    height: 1px;
+}
+
+
+
+/* SHARE BOX */
+.share-box {
+    margin: 30px 0 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.share-title {
+    color: #010101;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    position: relative;
+    top: 5px;
+    text-transform: uppercase;
+}
+.share-art {
+    float: right;
+    padding: 0;
+    padding-top: 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.share-art a {
+    color: #fff;
+    padding: 3px 8px;
+    margin-left: 4px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 0;
+}
+.share-art .fac-art {
+    background: #3b5998;
+}
+.share-art .twi-art {
+    background: #00acee;
+}
+.share-art .pin-art {
+    background: #CA2127;
+}
+.share-art .lin-art {
+    background: #0077B5;
+}
+.share-art .wat-art {
+    background: #30bf55;
+}
+
+
+
+
+
 .status-msg-wrap {
     font-size: 110%;
     width: 100%!important;
@@ -392,12 +529,11 @@ h2.post-title a {color:#464646;}
 
 
 .cloud-label-widget-content a {
-    padding: 3px 5px;
-    background: #f1f1f1;
-    border-radius: 16px;
+	padding: 3px 3px;
     color: #e62626;
+    border-right: 1px solid #ccc;
     font-weight: 500;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.78), 0 2px 10px 0 rgba(0, 0, 0, 0);
+    font-size: 13.3px!important;
 }
 
 .cloud-label-widget-content span {
@@ -405,13 +541,93 @@ h2.post-title a {color:#464646;}
     float: left;
     padding: 0 6px 17px 0;
 }
+.list-label-widget-content li {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+}
+.list-label-widget-content li a:before {
+    content: &#39;\203a&#39;;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    font-size: 22px;
+    color: #010101;
+}
+.list-label-widget-content li a {
+    color: #010101;
+    padding-left: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.list-label-widget-content li a:hover {text-shadow: 1px 1px 1px #4090f1;}
+
+.TextList li {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+    color: #010101;
+    padding-left: 20px;
+    font-weight: 400;
+}
+.TextList li:before {
+    content: &#39;\203a&#39;;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    font-size: 22px;
+    color: #010101;
+}
+
+.Profile .profile-img {
+    float: left;
+    margin: 0 5px 5px;
+    width: 79px!important;
+    height: 79px;
+    border: 1px solid #ccc;
+    border-radius: 39.5px;
+}
+.Profile .profile-name-link {
+    background-image: none!important;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    min-height: 20px;
+    padding: 0;
+    color: #212121;
+    font-size: 26px!important;
+}
+.Profile .profile-link {
+    font-size: 13px!important;
+}
+.Profile .profile-textblock {
+    margin: .5em 0;
+    font-size: 13.3px!important;
+    letter-spacing: .2px;
+}
+
+
+.BlogSearch input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #cfd7e6;
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba(207,215,230,0.4);
+    box-shadow: inset 0 1px 2px 0 rgba(207,215,230,0.4);
+}
 
 /* CONTACT FORM WİDGET */
 .contact-form-widget {max-width: 420px;width:100%;}
 .contact-form-name, .contact-form-email, .contact-form-email-message {max-width: 420px;width: 100%;}
 .contact-form-email, .contact-form-name {background: #fff;background-color: #fff;border: 1px solid #d9d9d9;border-top: 1px solid #c0c0c0;box-sizing: border-box;color: #333;display: inline-block;font-size: 16px;height: 30px;margin: 0;margin-top: 5px;padding:0 0 0 3px;vertical-align: top;}
 .contact-form-email-message {background: #fff;background-color: #fff;border: 1px solid #d9d9d9;border-top: 1px solid #c0c0c0;box-sizing: border-box;color: #333;display: inline-block;font-size: 16px;margin: 0;margin-top: 5px;padding:0 0 0 3px;vertical-align: top;}
-.contact-form-button-submit {width: 100px;height: 35px;font-size: 16px;background-color: #4d90fe;background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);background-image: -o-linear-gradient(top,#4d90fe,#4787ed);background-image: linear-gradient(top,#4d90fe,#4787ed);border-color: #3079ed;filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d90fe',EndColorStr='#4787ed');
+.contact-form-button-submit {width: 100px;height: 35px;font-size: 16px;background-color: #4d90fe;background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);background-image: -o-linear-gradient(top,#4d90fe,#4787ed);background-image: linear-gradient(top,#4d90fe,#4787ed);border-color: #3079ed;filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#4d90fe&#39;,EndColorStr=&#39;#4787ed&#39;);
 }
 /* ----------------- */
 
@@ -449,7 +665,19 @@ h2.post-title a {color:#464646;}
 	#sidebar .widget {margin:16px 2px 16px 2px;}
 	#footer-wrapper .widget {margin:16px 0 16px 0px;}
 .roma-widget li {float: none;width: 100%;}
-} 
+.related-thumb {
+  height: 130px;}
+.related li .related-img {
+    height: 100%;
+}
+.related li {
+    width: 100%;
+    margin-right: 0;
+    min-height: auto;
+}
+span.resp_del {
+    display: none;
+}
 </style>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' type='text/javascript'/>
 </head>
@@ -457,7 +685,7 @@ h2.post-title a {color:#464646;}
 <div class='w3-row' id='brand-wrapper'>
 <div class='w3-col s12 m4 l3' id='brand-div'>
 <b:section id='brand' maxwidgets='1' showaddelement='yes'>
-  <b:widget id='Header1' locked='false' title='Dijital bir blog (Üstbilgi)' type='Header'>
+  <b:widget id='Header1' locked='false' title='Blogger Blog Theme (Üstbilgi)' type='Header'>
     <b:widget-settings>
       <b:widget-setting name='displayUrl'>http://1.bp.blogspot.com/-jeX4_5_sRro/XrrUz7zJQmI/AAAAAAAAObY/Mut17eH7B8ElAY0m67IbAPHviX9hXlLBACK4BGAYYCw/s1600/cropped-20200501_033307_0000.png</b:widget-setting>
       <b:widget-setting name='displayHeight'>104</b:widget-setting>
@@ -536,24 +764,7 @@ h2.post-title a {color:#464646;}
 </b:section>
   </div>
 <div class='w3-col s12 m8 l9' id='brand-ads-div'>
-<b:section id='brand-ads' maxwidgets='1' showaddelement='yes'>
-  <b:widget id='HTML1' locked='false' title='' type='HTML'>
-    <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<img alt="banner image" src="https://1.bp.blogspot.com/-9JXEVlBLxa8/Wc6Ac6Abw3I/AAAAAAAAKDc/Xj6VZGZ-o9o-1M87IdsV_5-CYq62Duh-gCLcBGAs/s1600/unnamed.jpg" title="banner-title" width="100%"/>]]></b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-</b:section>
+<b:section id='brand-ads' maxwidgets='1' showaddelement='yes'/>
   </div>
   </div><!-- brand-wrapper -->
 <div class='w3-rest w3-card-2' id='header-wrapper'>
@@ -660,12 +871,10 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   <b:widget id='LinkList110' locked='true' title='Menu' type='LinkList' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>NONE</b:widget-setting>
-      <b:widget-setting name='text-1'>İletişim</b:widget-setting>
-      <b:widget-setting name='link-1'>http://#</b:widget-setting>
-      <b:widget-setting name='text-0'>Hakkımda</b:widget-setting>
-      <b:widget-setting name='link-2'>http://#</b:widget-setting>
-      <b:widget-setting name='link-0'>http://#</b:widget-setting>
-      <b:widget-setting name='text-2'>Reklam</b:widget-setting>
+      <b:widget-setting name='text-1'>Github Sayfası</b:widget-setting>
+      <b:widget-setting name='link-1'>https://github.com/cihaneken/blogger-blog-theme</b:widget-setting>
+      <b:widget-setting name='text-0'>İletişim</b:widget-setting>
+      <b:widget-setting name='link-0'>https://blogger-blog-theme.blogspot.com/p/iletisim.html</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
           <div class='widget-content'>
@@ -687,24 +896,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
 </div><!-- header-wrapper -->
 
 <div class='w3-rest' id='random-post-div'>
-<b:section class='HTML' id='HTML' maxwidgets='1' name='Random Post' showaddelement='yes'>
-  <b:widget id='HTML4' locked='false' title='' type='HTML'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>rasgeleyazilaryukleniyor</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-</b:section>
+<b:section class='HTML' id='HTML' maxwidgets='1' name='Random Post' showaddelement='yes'/>
 </div>
 
 
@@ -1354,8 +1546,50 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
 				  </span>
               </span> 
     </div>
+
+
+
+<div class='share-box'>
+ 
+          <h8 class='share-title'>Bunu paylaşın:</h8>
+               <div class='share-art'> 
+<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'> Facebook</span></a>
+
+<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del'> Twitter</span></a>
+
+<!--<a class='goo-art' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-google-plus'/><span class='resp_del3'> Google+</span></a>-->
+
+<a class='pin-art' expr:href='&quot;http://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl + &quot;&amp;description=&quot; + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-pinterest'/><span class='resp_del'> Pinterest</span></a>  
+
+<a class='lin-art' expr:href='&quot;http://www.linkedin.com/shareArticle?url=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-linkedin-square'/><span class='resp_del'> Linkedin</span></a>
+
+<a class='wat-art' expr:href='&quot;whatsapp://send?text=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-whatsapp'/><span class='resp_del'> Whatsapp</span></a>
+</div>
+         </div>
+
+
+
+<div class='sf-module-title sf-center sf-has-line'><h2 class='sf-title'>Şunlar da hoşunuza gidebilir</h2></div>
+
+<div id='related-posts'>
+        <b:if cond='data:post.labels'>
+          <b:loop values='data:post.labels' var='label'>
+            <b:if cond='data:label.isLast == &quot;true&quot;'>
+              <data:label.name/>
+            </b:if>
+          </b:loop>
+        </b:if>
+      </div>
+
+
+
+
+
+
+
   </div>
 <b:include name='nextprev'/>
+
 
 <b:else/>
 
@@ -1754,22 +1988,6 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   </div>
 </b:includable>
       </b:widget>
-      <b:widget id='HTML3' locked='false' title='' type='HTML'>
-        <b:widget-settings>
-          <b:widget-setting name='content'><![CDATA[<img alt="banner image" src="https://4.bp.blogspot.com/-2Vqkc5tGUV0/Wc5-op_EtpI/AAAAAAAAKDY/TOAl5lg_VQAEQQHabZuZaL091BErrVlfACEwYBhgL/s1600/3-1.jpg" title="banner-title" width="100%"/>]]></b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-      </b:widget>
     </b:section>  
   </div>
 
@@ -1819,6 +2037,52 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
       </li>
       </b:loop>
     </ul>
+  </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='Label2' locked='false' title='Kategoriler' type='Label'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>Geliştirme,Özellik</b:widget-setting>
+      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
   </div>
 </b:includable>
   </b:widget>
@@ -1902,7 +2166,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   </a>
 </b:includable>
   </b:widget>
-  <b:widget id='Label1' locked='false' title='Etiketler' type='Label'>
+  <b:widget id='Label1' locked='false' title='Etiket Bulutu' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>CLOUD</b:widget-setting>
@@ -1948,39 +2212,6 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='ContactForm1' locked='false' title='İletişim Formu' type='ContactForm'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='contact-form-widget'>
-    <div class='form'>
-      <form name='contact-form'>
-        <p/>
-        <data:contactFormNameMsg/>
-        <br/>
-        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' size='30' type='text' value=''/>
-        <p/>
-        <data:contactFormEmailMsg/> <span style='font-weight: bolder;'>*</span>
-        <br/>
-        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' size='30' type='text' value=''/>
-        <p/>
-        <data:contactFormMessageMsg/> <span style='font-weight: bolder;'>*</span>
-        <br/>
-        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='5'/>
-        <p/>
-        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
-        <p/>
-        <div style='text-align: center; max-width: 222px; width: 100%'>
-          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
-          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
-        </div>
-      </form>
-    </div>
-  </div>
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
 </b:section>
   </div>
   </div><!-- content-wrapper -->
@@ -1995,7 +2226,7 @@ select.selectnav{color:#010101;padding:0 5px 0 10px;border:0;font:14px Montserra
 <b:section id='footer4' showaddelement='yes'>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'>2020 - BLOGCU.ML - Tüm hakları saklıdır.</b:widget-setting>
+      <b:widget-setting name='content'>Blogger Blog Theme Copyright</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2054,7 +2285,55 @@ $(document).ready(function() {
 });
 
 
-
+$("#related-posts").each(function() {
+	var no_image_url = "//2.bp.blogspot.com/-IO-XEI1LgEs/VmPNKFp0BhI/AAAAAAAACOg/_JrYHMBXV5w/s460/nothumb.jpg";
+	var related_number = 3;
+    var g = $(this).html();
+    $.ajax({
+        url: "/feeds/posts/default/-/" + g + "?alt=json-in-script&max-results=" + related_number,
+        type: 'get',
+        dataType: "jsonp",
+        success: function(data) {
+            var posturl = "";
+            var htmlcode = '<div class="related">';
+            for (var i = 0; i < data.feed.entry.length; i++) {
+                for (var j = 0; j < data.feed.entry[i].link.length; j++) {
+                    if (data.feed.entry[i].link[j].rel == "alternate") {
+                        posturl = data.feed.entry[i].link[j].href;
+                        break
+                    }
+                }
+                var posttitle = data.feed.entry[i].title.$t;
+                var content = data.feed.entry[i].content.$t;
+                var $content = $('<div>').html(content);
+                if (content.indexOf("http://www.youtube.com/embed/") > -1 || content.indexOf("https://www.youtube.com/embed/") > -1) {
+                    var src2 = data.feed.entry[i].media$thumbnail.url;
+                    var thumb = '<a class="related-img" href="' + posturl + '" style="background:url(' + src2 + ') no-repeat center center;background-size: cover"/>'
+                } else if (content.indexOf("<img") > -1) {
+                    var src = $content.find('img:first').attr('src');
+                    var thumb = '<a class="related-img" href="' + posturl + '" style="background:url(' + src + ') no-repeat center center;background-size: cover"/>'
+                } else {
+                    var thumb = '<a class="related-img" href="' + posturl + '" style="background:url(' + no_image_url + ') no-repeat center center;background-size: cover"/>'
+                }
+                htmlcode += '<li><div class="related-thumb">' + thumb + '</div><h3 class="related-title"><a href="' + posturl + '">' + posttitle + '</a></h3></li>'
+            }
+            htmlcode += '</div><div class="clear"/>';
+            $("#related-posts").html(htmlcode);
+            $('.related-img').each(function() {
+                $(this).attr('style', function(i, src) {
+                    return src.replace('/nothumb.jpg', '/nothumb.jpg')
+                }).attr('style', function(i, src) {
+                    return src.replace('s72-c', 's460')
+                })
+            });
+            $("p.trans").each(function() {
+                var e = $(this).text();
+                var t = $(this).attr("data-tran");
+                $("#pages-wrap *").replaceText(e, t)
+            })
+        }
+    })
+});
 
 
 
@@ -2107,7 +2386,7 @@ $('.HTML .widget-content').each(function() {
                                 $(this).html(htmlcode);
                                 $(this).find('.mag-thumb').each(function() {
                                     $(this).attr('style', function(i, src) {
-                                        return src.replace('nothumb.jpg', '/nothumb.jpg')
+                                        return src.replace('/nothumb.jpg', '/nothumb.jpg')
                                     }).attr('style', function(i, src) {
                                         return src.replace('s72-c', 's460')
                                     })
