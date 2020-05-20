@@ -303,7 +303,10 @@ html, body, p, a, h1, h2, h3, h4, h5, h6 {
   font-family: &quot;Google Sans&quot;, &quot;Roboto&quot;, sans-serif;}
   a {text-decoration:none;color:#4090f1;}
   a.quickedit {display: none;}
-
+.Header .title {
+    font-size: 36px;
+    font-weight: bold;
+}
 #header-wrapper .widget {margin:0;}
 #brand-ads-div img {width: 100%;}
 
